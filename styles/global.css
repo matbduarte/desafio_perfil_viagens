@@ -26,6 +26,9 @@
     --py-base: 1rem;
     --py-md: 1rem;
     --py-lg: 2rem;
+
+    --img-sm: 2.5rem;
+    --img-lg: 7.5rem;
 }
 
 body {
@@ -40,6 +43,12 @@ header {
 
 h1 {
     font: var(--h1);
+    color: var(--text-color-primary);
+}
+
+p {
+    font: var(--text-md);
+    color: var(--text-color-secondary);
 }
 
 a {
@@ -60,5 +69,7 @@ ul[role="list"] {
         --py-base: 1.25rem;
         --py-md: 1.5rem;
         --py-lg: 2rem;
+
+        --img-lg: 11rem;
     }
 }
