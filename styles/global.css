@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --brand-color: #EF5F4C;
+    --bg-color: #FFFFFF;
+    --surface-color: #F5F5F5;
+    --skeleton-color: #D9D9D9;
+    --text-color-primary: #313131;
+    --text-color-secondary: #6C6C6C;
+
+    --font-family: 'Poppins', sans-serif;
+    --h1: 800 32px/125% var(--font-family);
+    --text-lg: 400 16px/150% var(--font-family);
+    --text-md: 400 14px/170% var(--font-family);
+    --text-sm: 400 12px/170% var(--font-family);
+
+    --px-lg: 1rem;
+
+    --py-base: 1rem;
+    --py-md: 1rem;
+    --py-lg: 2rem;
+}
+
+body {
+    font: var(--text-sm);
+    color: var(--text-color-primary);
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--surface-color);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul[role="list"] {
+    list-style: none;
+}
+
+@media (width >=80em) {
+
+    /* 1280px */
+    :root {
+        --px-lg: 2rem;
+
+        --py-base: 1.25rem;
+        --py-md: 1.5rem;
+        --py-lg: 2rem;
+    }
+}
