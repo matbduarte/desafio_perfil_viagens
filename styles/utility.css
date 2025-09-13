@@ -50,6 +50,7 @@
 
 .align-center {
     align-items: center;
+    align-content: center;
 }
 
 .gap-05 {
@@ -68,6 +69,14 @@
     display: grid;
 }
 
+.grid-gap {
+    gap: var(--grid-gap);
+}
+
+.items-center {
+    place-items: center;
+}
+
 .profile-image-small {
     width: var(--img-sm);
     height: var(--img-sm);
@@ -80,6 +89,13 @@
     height: var(--img-lg);
     border-radius: 50%;
     object-fit: cover;
+}
+
+.content {
+    img {
+        width: var(--content-img-size);
+        height: var(--content-img-size);
+    }
 }
 
 .pointer {

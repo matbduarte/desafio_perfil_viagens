@@ -29,6 +29,10 @@
 
     --img-sm: 2.5rem;
     --img-lg: 7.5rem;
+
+    --content-img-size: 20.5rem;
+
+    --grid-gap: 1rem;
 }
 
 body {
@@ -71,5 +75,9 @@ ul[role="list"] {
         --py-lg: 2rem;
 
         --img-lg: 11rem;
+
+        --content-img-size: 17.875rem;
+
+        --grid-gap: 1.5rem;
     }
 }
