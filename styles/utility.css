@@ -2,6 +2,10 @@
     padding-inline: var(--px-lg);
 }
 
+.px-about {
+    padding-inline: var(--px-about);
+}
+
 .py-base {
     padding-block: var(--py-base);
 }
@@ -20,6 +24,12 @@
     margin-inline: auto; /* center container */
 }
 
+.container-about {
+    --max-width: 360px;
+    width: min(var(--max-width), 100% - var(--px-about) * 2); /* subtract lateral padding from both sides */
+    margin-inline: auto; /* center container */
+}
+
 .container-header {
     --max-width: 360px;
     width: min(var(--max-width), 100%); /* subtract lateral padding from both sides */
@@ -33,6 +43,8 @@
 /* make one above the other on mobile */
 .even-columns {
     display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
     gap: 1rem;
 }
 
@@ -44,6 +56,11 @@
     flex-direction: column;
 }
 
+.justify-center {
+    justify-items: center;
+    place-content: center;
+}
+
 .justify-between {
     justify-content: space-between;
     place-content: space-between;
@@ -51,6 +68,10 @@
 
 .justify-end {
     justify-content: end;
+}
+
+.justify-self-start {
+    justify-self: start;
 }
 
 .align-center {
@@ -112,13 +133,37 @@
         --max-width: 80rem;
     }
 
+    .container-about {
+        --max-width: 80rem;
+    }
+
     .desktop-only {
         display: initial;
     }
 
     /* make side by side on desktop */
     .even-columns {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: stretch;
+    }
+
+    footer :nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .about :nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .about :nth-child(2) {
+        grid-column-start: 4;
+        grid-column-end: 4;
+    }
+
+    .description {
+        width: 24rem;
     }
 }
